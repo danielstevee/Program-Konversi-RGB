@@ -22,17 +22,13 @@ C_img = (C * 255).astype(np.uint8)
 M_img = (M * 255).astype(np.uint8)
 Y_img = (Y * 255).astype(np.uint8)
 K_img = (K * 255).astype(np.uint8)
-
 CMYK_img = (CMYK[:, :, :3] * 255).astype(np.uint8)  # tampilkan C,M,Y saja sebagai image
 
 cv2.imshow("Original", image)
-
 cv2.imshow("Cyan", C_img)
 cv2.imshow("Magenta", M_img)
 cv2.imshow("Yellow", Y_img)
 cv2.imshow("Black (K)", K_img)
-
 cv2.imshow("CMYK (visual)", cv2.cvtColor(CMYK_img, cv2.COLOR_RGB2BGR))
-
 cv2.waitKey(0)
 cv2.destroyAllWindows()

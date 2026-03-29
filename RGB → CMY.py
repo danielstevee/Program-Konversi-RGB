@@ -10,7 +10,6 @@ C = 1 - img_norm[:, :, 0]
 M = 1 - img_norm[:, :, 1]
 Y = 1 - img_norm[:, :, 2]
 
-
 CMY = np.dstack((C, M, Y))
 
 C_img = (C * 255).astype(np.uint8)
@@ -18,9 +17,7 @@ M_img = (M * 255).astype(np.uint8)
 Y_img = (Y * 255).astype(np.uint8)
 CMY_img = (CMY * 255).astype(np.uint8)
 
-
 cv2.imshow("Original", image)
-
 cv2.imshow("Cyan", C_img)
 cv2.imshow("Magenta", M_img)
 cv2.imshow("Yellow", Y_img)
